@@ -1,0 +1,252 @@
+* {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    /* font-family: 微軟正黑體; */
+} 
+body {
+    /* background-color: #746357 */
+    background-image: url(../img/shop/bg01.png);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+/* .tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 200px;
+    height: 300px;
+    top: 500px;
+} */
+
+button {
+    background-color: inherit;
+    width: 150px;
+    border: none;
+    /* outline: none; */
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.img-fluid {
+    width: 300px;
+    height: 250px;
+    border-radius: 5% 5% 0 0;
+}
+
+.card {
+    border-radius: 5%;
+    margin-left: 1%;
+}
+
+h5,
+h6 {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.qty_input {
+    margin-left: 29%;
+    width: 130px;
+
+}
+
+.addcart {
+    margin: auto ;
+    margin-top: 2%;
+}
+
+.mymodal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 4;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+.qty{
+  width: 100px;
+  margin: auto;
+  text-align: center;
+}
+.modal-content-p {
+    background-color: rgb(236, 230, 220);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    /* width: 50%; */
+    text-align: center;
+    width: 800px;
+
+}
+
+.modaldiv>ul {
+    font-size: 1.2rem;
+    /* font-family: ; */
+}
+
+li {
+    list-style-type: none;
+}
+
+@media screen and (max-width:537px) {
+
+    .modal-content,
+    .modaldiv {
+        width: 300px;
+    }
+
+    .modaldiv img {
+        width: 90%;
+    }
+}
+
+.badge-notify {
+    background: red;
+    position: relative;
+    top: -20px;
+    right: 10px;
+}
+
+.my-cart-icon-affix {
+    position: fixed;
+    z-index: 999;
+}
+.navbar-menu > li > a {
+    display: block;
+    padding: 10px 5px;
+    line-height: 24px;
+    color: #777;
+    text-decoration: none;
+    transition: color .3s;
+  }
+  .navbar-menu > li > a:hover,
+  .navbar-menu > li > a:focus {
+    color: skyblue;
+  }
+  .button-toggle {
+    float: right;
+    display: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    line-height: 24px;
+    color: #777;
+    text-decoration: none;
+    transition: color .3s;
+    border: 1px solid #ccc;
+  }
+  @media screen and (max-width: 600px) {
+    .navbar-menu {
+      float: none;
+      display: none;
+    }
+    .navbar-menu.active {
+      display: block;
+    }
+    .navbar-menu > li {
+      display: block;
+    }
+    .openbtn {
+      display: inline-block;
+    }
+    .modal-content-p {
+        width: 400px;
+    }
+  }
+  .openbtn {
+    float: left;
+    display: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    line-height: 24px;
+    color: #777;
+    text-decoration: none;
+    transition: color .3s;
+    border: 1px solid #ccc;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.navbar-menu > li {
+display: inline-block;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 650px) {
+    
+
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../css/P02.css">
+    <script src="../js/jquery-2.2.3.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .carousel-item img {
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        .col-6 img {
+            width: 550px;
+            height: 350px;
+            border-radius: 10px;
+        }
+
+
+        tr,
+        td,
+        th {
+            border: 1px solid white;
+            text-align: center;
+
+        }
+
+        table {
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        th {
+            background-color: #f5587b;
+        }
+
+        .trhead {
+            background-color: #fff591;
+        }
+
+        /* tr:nth-child(2n+1){background-color:lightgoldenrodyellow} */
+        tr:nth-child(2n) {
+            background-color: #ff8a5c;
+        }
+    .menu {
+            width: 100%;
+            display: flex;
+            background: #272626;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu ul {
+            right: 10%;
+        }
+
+        .menu li {
+            float: left;
+            list-style: none;
+            margin: 0px 50px 0px 0px;
+            font-size: 20px;
+            padding-top: 15px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: rgb(146, 151, 150);
+            transition: color linear 0.15s;
+            cursor: pointer;
+
+        }
+
+        .menu .menu-logo {
+            margin: auto;
+            margin-left: 46.5%;
+            padding: 10px 10px 10px 20px;
+        }
+
+        .menu .menu-logo a {
+            color: #fff;
+        }
+
+        .menu a:hover,
+        .menu .current-active a {
+            text-decoration: none;
+            color: #FF9900;
+        }
+
+        .toggle-nav,
+        .leftmenu {
+            display: none;
+        }
+
+        #logo {
+            height: 40px;
+        }
+
+        @media screen and (max-width: 1065px) {
+            .menucontainer {
+                display: flex;
+            }
+
+            .menu {
+                position: relative;
+                display: inline-block;
+            }
+
+            .toggle-nav {
+                display: block;
+                position: absolute;
+                left: 4%;
+                color: #ffffff;
+                text-decoration: none;
+                line-height: 40px;
+            }
+
+            .menu .menu-logo {
+                position: relative;
+
+            }
+
+            .menu ul {
+                display: none;
+            }
+
+            .closebtn {
+                position: relative;
+                margin: 16px;
+                left: 80%;
+                font-size: 1.5em;
+            }
+
+            .closebtn:hover {
+                cursor: pointer;
+                color: #FF9900;
+            }
+
+            .leftmenu {
+                display: block;
+                background-color: #272626;
+                color: white;
+                height: 100%;
+                width: 45vw;
+                z-index: 1;
+                position: fixed;
+                left: -100%;
+                transition: all 1s;
+                padding-left:30px;
+            }
+
+            .leftmenu.active {
+                position: fixed;
+                top: 0;
+                left: 0%;
+                transition: all 1s;
+            }
+
+            .leftul li {
+                list-style: none;
+                margin: 32px auto;
+                font-size: 2em;
+            }
+
+            .leftul li.current-active,
+            .leftul li:hover,
+            .leftul li a:hover {
+                color: #FF9900;
+            }
+
+            .leftul li :hover {
+                cursor: pointer;
+            }
+
+            .leftul li a {
+                text-decoration: none;
+                color: rgb(146, 151, 150);
+                transition: color linear 0.15s;
+                cursor: pointer;
+
+            }
+        }
+      
+
+
+    </style>
+</head>
+
+<body>
+    <div class="menucontainer">
+        <div class="leftmenu">
+            <div class="closebtn">
+                X
+            </div>
+            <ul id="menuUl" class="leftul">
+                <li ><a href="../blog.php">認識咖啡</a></li>
+                <li><a href="../orderdetail.php">訂單查詢</a></li>
+                <li ><a href="../catalog.php">商店</a></li>
+                <li><a href="../shopping_car.php">購物車</a></li>
+                
+            </ul>
+        </div>
+        <nav class="menu">
+            <a id="menubtn" class="toggle-nav" href="#">☰</a>
+            <div class="menu-logo"><a href="./home.html"><img id="logo" src="../img/top/logo.png" alt=""></a></div>
+            <ul id="menuUl" class="">
+                <li style="color: white;padding: auto;"><a href="../blog.php">認識咖啡</a></li>
+                <li style="color: white;padding: auto;"><a href="../orderdetail.php">訂單查詢</a></li>
+                <li style="color: white;padding: auto;"><a href="../catalog.php">商店</a></li>
+                <li style="color: white;padding: auto;"><a href="../shopping_car.php">購物車</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container"
+        style=" margin: auto;margin-top: 1%;margin-bottom: 3%; padding: 10px;background-color: antiquewhite;">
+        <h2>烘焙</h2>
+        <div>
+            <video class="container" src="../img/blog/CoffeeRoast.mp4"></video>
+            <p>&emsp;&emsp;咖啡生豆不能直接食用或飲用，我們一般看到的褐色或深褐色帶有誘人香味的咖啡熟豆，是生豆經過加熱烘焙、脱去銀皮後的產物。
+                <br>烘焙，是咖啡經過高溫焙製，發生一系列物理和化學變化而產生色、香、味並形成風味油脂的過程。早在數百年前，人們已經開始使用烘焙後的咖啡豆，
+                但對烘培過程卻無深入研究，有人認為這是一個難以琢磨的神祕過程，也有人認為是不需要什麼高深技術的工作。
+                隨著人們對於咖啡風味與口感的要求越來越高，每個加工環節都被人們拿來放大研究。
+                現代科技日趨成熟，烘焙過程中蘊藏的物理、化學變化也越來越被人認識。
+            </p>
+            <p>&emsp;&emsp;咖啡豆加熱過程中會流失水分，導致重量減輕10〜15%。與此同時，內部二氧化碳大量溢出，會導致體積膨脹25〜60%，像爆米花一樣。
+                <br>緊緻的纖維結構發生膨脹變化後，會形成大量孔洞二氧化碳和揮發性芳香物質(Volatile Aromatics)都順著這些不規則的通道逸出,使得原本堅硬的咖啡生豆變得焦脆易碎。
+            </p>
+            <table class="container">
+
+                <tr>
+                    <th style="border-radius: 10px 0 0 0;">階段</th>
+                    <th>烘焙程度</th>
+                    <th>烘焙進程</th>
+                    <th style="border-radius: 0 10px 0 0;">風味特徵</th>
+                </tr>
+                <tr>
+                    <td class="trhead" rowspan="2">淺烘焙
+                        <br> Light Roast</td>
+                    <td>極淺度焙<br>
+                        Light Roast</td>
+                    <td>進入一爆</td>
+                    <td>花果香濃郁，果酸強烈。</td>
+                </tr>
+                <tr>
+
+                    <td>肉桂烘焙<br>
+                        Cinnamon Roast</td>
+                    <td>一爆密集期至末期</td>
+                    <td>濃郁花果香，果酸味較弱。</td>
+                </tr>
+                <tr>
+                    <td class="trhead" rowspan="2">中烘焙
+                        <br> Medium Roast</td>
+                    <td>中度烘焙<br>
+                        Medium Roast</td>
+                    <td>一爆結束</td>
+                    <td>口感乾淨，明亮的酸度，香氣適中。</td>
+                </tr>
+                <tr>
+
+                    <td>中深烘焙<br>
+                        High Roast</td>
+                    <td>一爆後二爆前</td>
+                    <td>層次豐富，酸苦均衡，無苦澀味、略呈現豆甜味、香氣風味均佳。</td>
+                </tr>
+                <tr>
+                    <td class="trhead" rowspan="2">中深焙
+                        <br>Moderately
+                        <br>Dark Roast</td>
+                    <td>城市烘焙<br>City Roast</td>
+                    <td>進入二爆</td>
+                    <td>口感層次豐當、酸苦均衡、酸性偏淡、呈現豆原始特色風味。</td>
+                </tr>
+                <tr>
+
+                    <td>全都會烘焙<br>
+                        Full City Roast</td>
+                    <td>進入二爆</td>
+                    <td>口感韻濃飽滿、偏苦味帶酸味、回韻甘甜。</td>
+                </tr>
+                <tr>
+                    <td class="trhead" rowspan="2">深烘焙
+                        <br>Dark Roast</td>
+                    <td>法式烘焙<br>
+                        French Roast</td>
+                    <td>二爆密集至末期</td>
+                    <td>口感強勁濃烈、苦味較濃、較無酸味、呈現濃郁巧克力及煙燻香氣。</td>
+                </tr>
+                <tr>
+
+                    <td>義式烘焙<br>
+                        Italian Roast</td>
+                    <td>二爆結束</td>
+                    <td>層次複雜、苦味強勁、無酸味、呈現厚煎培味及焦香味。</td>
+                </tr>
+
+            </table>
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <footer style="background-color: #272626;margin-top:2% ;">
+        <div style="color: #777;">
+            © Copyright 2021 SHIMOKITAZAWA
+        </div>
+    </footer>
+<script>
+     $('#menubtn').click(function() {
+            $('.leftmenu').toggleClass('active');
+        })
+
+        $('#menuUl li').click(function() {
+            $(this).parent().find('li').each(function() {
+                if ($(this).hasClass('current-active')) {
+                    $(this).toggleClass('current-active');
+                }
+            })
+            $(this).toggleClass('current-active');
+        })
+
+        $('.closebtn').click(function() {
+            $('.leftmenu').toggleClass('active');
+        })</script>
+</body>
+
+</html>

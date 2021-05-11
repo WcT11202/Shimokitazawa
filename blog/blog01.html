@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../css/P02.css">
+    <script src="../js/jquery-2.2.3.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .carousel-item img {
+            height: 600px;
+            border-radius: 10px;
+        }
+
+        .col-6 img {
+            width: 550px;
+            height: 350px;
+            border-radius: 10px;
+        }
+    .menu {
+            width: 100%;
+            display: flex;
+            background: #272626;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu ul {
+            right: 10%;
+        }
+
+        .menu li {
+            float: left;
+            list-style: none;
+            margin: 0px 50px 0px 0px;
+            font-size: 20px;
+            padding-top: 15px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: rgb(146, 151, 150);
+            transition: color linear 0.15s;
+            cursor: pointer;
+
+        }
+
+        .menu .menu-logo {
+            margin: auto;
+            margin-left: 46.5%;
+            padding: 10px 10px 10px 20px;
+        }
+
+        .menu .menu-logo a {
+            color: #fff;
+        }
+
+        .menu a:hover,
+        .menu .current-active a {
+            text-decoration: none;
+            color: #FF9900;
+        }
+
+        .toggle-nav,
+        .leftmenu {
+            display: none;
+        }
+
+        #logo {
+            height: 40px;
+        }
+
+        @media screen and (max-width: 1065px) {
+            .menucontainer {
+                display: flex;
+            }
+
+            .menu {
+                position: relative;
+                display: inline-block;
+            }
+
+            .toggle-nav {
+                display: block;
+                position: absolute;
+                left: 4%;
+                color: #ffffff;
+                text-decoration: none;
+                line-height: 40px;
+            }
+
+            .menu .menu-logo {
+                position: relative;
+
+            }
+
+            .menu ul {
+                display: none;
+            }
+
+            .closebtn {
+                position: relative;
+                margin: 16px;
+                left: 80%;
+                font-size: 1.5em;
+            }
+
+            .closebtn:hover {
+                cursor: pointer;
+                color: #FF9900;
+            }
+
+            .leftmenu {
+                display: block;
+                background-color: #272626;
+                color: white;
+                height: 100%;
+                width: 45vw;
+                z-index: 1;
+                position: fixed;
+                left: -100%;
+                transition: all 1s;
+                padding-left:30px;
+            }
+
+            .leftmenu.active {
+                position: fixed;
+                top: 0;
+                left: 0%;
+                transition: all 1s;
+            }
+
+            .leftul li {
+                list-style: none;
+                margin: 32px auto;
+                font-size: 2em;
+            }
+
+            .leftul li.current-active,
+            .leftul li:hover,
+            .leftul li a:hover {
+                color: #FF9900;
+            }
+
+            .leftul li :hover {
+                cursor: pointer;
+            }
+
+            .leftul li a {
+                text-decoration: none;
+                color: rgb(146, 151, 150);
+                transition: color linear 0.15s;
+                cursor: pointer;
+
+            }
+        }
+      
+
+
+    </style>
+</head>
+
+<body>
+    <div class="menucontainer">
+        <div class="leftmenu">
+            <div class="closebtn">
+                X
+            </div>
+            <ul id="menuUl" class="leftul">
+                <li ><a href="../blog.php">認識咖啡</a></li>
+                <li><a href="../orderdetail.php">訂單查詢</a></li>
+                <li ><a href="../catalog.php">商店</a></li>
+                <li><a href="../shopping_car.php">購物車</a></li>
+                
+            </ul>
+        </div>
+        <nav class="menu">
+            <a id="menubtn" class="toggle-nav" href="#">☰</a>
+            <div class="menu-logo"><a href="./home.html"><img id="logo" src="../img/top/logo.png" alt=""></a></div>
+            <ul id="menuUl" class="">
+                <li style="color: white;padding: auto;"><a href="../blog.php">認識咖啡</a></li>
+                <li style="color: white;padding: auto;"><a href="../orderdetail.php">訂單查詢</a></li>
+                <li style="color: white;padding: auto;"><a href="../catalog.php">商店</a></li>
+                <li style="color: white;padding: auto;"><a href="../shopping_car.php">購物車</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <div class="container"
+        style=" margin: auto;margin-top: 1%;margin-bottom: 2%; padding: 20px;background-color: antiquewhite;">
+        <h1>咖啡帶與生產國</h1>
+        <blockquote class="wp-block-quote">
+            <p> “Black as the devil, hot as hell, pure as an angel, sweet as love.”—Charles Maurice de
+                Talleyrand-Périgord
+                <p>咖啡如魔鬼般漆黑，如地獄般炙熱，但又如天使般純潔，如愛般甜蜜。</p>
+                <p>－法國主教塔里蘭－</p>
+            </p>
+        </blockquote>
+        <div class="container">
+            <h4>咖啡種植帶</h4>
+            <p> &emsp;&emsp;全球大部分的咖啡產區都位於南北回歸線間的熱帶地區，我們稱之為『咖啡帶』（Coffee Zone）。作為熱帶經濟作物，啡
+                啡樹生長在氣候條件卓越的咖啡帶裡,終年陽光直射,有著豐沛的能量和充足的雨水,年平均氣温在20℃以上。
+                但高温、多濕、強光照射的環境也非任何品種的咖啡樹都能承受,例如某些阿拉比卡種的咖啡樹便不耐高溫多濕,
+                往往須種植在海拔較高的地區,如果光照過強還需要進行遮蔭處理,「雨林咖啡」、「蔭栽咖啡」便是由此得名。
+            </p>
+            <h4>咖啡三大原生種</h4>
+            <img class="container" src="../img/blog/ArabicaRobustaLiberica.jpg" alt="">
+            <p>
+                &emsp;&emsp;在所有原生種中,能夠進行人工栽種並產出咖啡豆,且擁有巨大商業價值的品種很少,
+                即為我們常說的咖啡三大原生種</br>阿拉比卡種咖啡(CoffeaArabica)、羅布斯塔種咖啡(Coffea Robusta)、頼比瑞亞種咖啡(Coffea Liberica)。
+                <br></br>&emsp;&emsp;然而原產地在非洲西那的賴比瑞亞種、出自粗咖啡種子系,咖啡樹是高大的跨綠喬木,其枝幹整體形態向上是最易辦認的特微。
+                此品種雖不難種植,但風味、香氣、抗病蟲害能力等方面皆薄弱、目前種植面積急劇萎縮,商業價值日減、多改作物種保存或科學研究。
+                阿拉比卡種原產自咖啡的故郷衣索比亞,後來透過阿拉伯半島傳入歐洲而廣為人知(葉門的摩卡港當時是運往歐洲的咖啡等物資之集散地),其英文學名便因此得名。
+                <br></br>&emsp;&emsp;另一源自紅咖啡種的原生種––羅布斯塔種,嚴格説來應被稱作中果咖啡(Coffea Canephora),原產地是位於非洲中部的剛果。
+                比起阿拉比卡種,羅布斯塔種有生命力強、抗病蟲害能力好、種植管理成本低、萃取率高等優點,但在風味與香氣上卻略遜一籌,
+                咖啡因含量也約為阿拉比卡種的兩倍,因此並不受消費者喜愛。
+                <br></br>&emsp;&emsp;與阿拉比卡種相比,羅布斯塔種的酸味並不明顯,苦味則往往較突出些。
+                現今在印尼、印度等產地已有高海拔種植、水洗加工的精品級羅布斯塔咖啡,
+                雖尚為個案卻讓人引頸期盼,羅布斯塔的未來並非一片黯淡。
+                <br></br>&emsp;&emsp;阿拉比卡種的咖啡植株通常不高,綠葉略顯修長,果實呈較小的橢圓狀,因此又稱作小果咖啡。
+                其風味出眾、香氣迷人,還有明顯的果酸,這些特性尤以產自高海拔地區的品種更為顯著。
+                雖然其生命力弱、抵禦病蟲害能力不強、種植管理成本較高,
+                但龐大的商業價值仍使其成為種植面積最廣的原生種。
+            </p>
+            <figure class="container">
+            <img class="container" src="../img/blog/CoffeeFamilyTree.jpg" alt="">
+            <figcaption style="color: lightgray;">《咖啡品種樹》</figcaption></figure>
+        </div>
+    </div>
+
+    <footer style="background-color: #272626;margin-top:2% ;">
+        <div style="color: #777;">
+            © Copyright 2021 SHIMOKITAZAWA
+        </div>
+    </footer>
+     <script>
+     $('#menubtn').click(function() {
+            $('.leftmenu').toggleClass('active');
+        })
+
+        $('#menuUl li').click(function() {
+            $(this).parent().find('li').each(function() {
+                if ($(this).hasClass('current-active')) {
+                    $(this).toggleClass('current-active');
+                }
+            })
+            $(this).toggleClass('current-active');
+        })
+
+        $('.closebtn').click(function() {
+            $('.leftmenu').toggleClass('active');
+        })</script>
+
+</body>
+
+</html>
